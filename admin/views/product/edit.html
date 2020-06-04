@@ -1,0 +1,128 @@
+<!-- BEGIN: EDIT -->
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/7c67c69820.js" crossorigin="anonymous"></script>
+<style>
+    table{
+            width: 85%;
+            border-collapse: collapse;
+            margin-top: 1%;
+    }
+    table tr{
+        height: 40px;
+    }
+    table th{
+        text-align: center;
+        width: 200px;
+    }
+    
+    table tr td input[type=text]{
+        width:100%;
+        height: 100%;
+        border:0;
+        outline: none;
+        padding-left: 20px;
+    }
+    table tr td a{
+        text-decoration: none;
+        color: black;
+        cursor: pointer;
+    }
+    table tr td a:hover{
+        color: black;
+        font-weight: bolder;
+    }
+    .box img{
+        width: 140px;
+        margin: auto ;
+        border-radius: 50%;
+        border: 2px solid rgb(19, 0, 128);`
+    }
+    .row{
+        margin-left: auto;
+    }
+    #editButton{
+        height: 2.5rem;
+        width: 6rem;
+        margin-top: 1%;
+        border: 1px solid gray;
+        border-radius: 20px;
+        font-weight: 600;            
+        line-height: 30px;
+        color: white;
+        background: linear-gradient(to left,rgb(2, 81, 112), rgb(11, 3, 122));  
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+    }
+    #deleteButton{
+        height: 2.5rem;
+        width: 6rem;
+        margin-top: 1%;
+        border: 1px solid gray;
+        border-radius: 20px;
+        line-height: 30px;
+        color: white;
+        font-weight: 600;            
+        background: linear-gradient(to left,rgb(2, 81, 112), rgb(11, 3, 122));  
+        cursor: pointer;
+        display: inline-block;
+        float: right;
+        margin-right: 15%;
+        margin-left: 0.5%;
+    }
+        
+</style>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+    <table class="table bordered">
+        <tr>
+            <th>Product Name</th>
+            <td>
+                <input name="pro_name" value="{EDIT.pro_name}" type="text">
+                <span style="color: red">{pro_name_err_mess}</span>
+            </td>
+        </tr>   
+        <tr>
+            <th>Product Price</th>
+            <td>
+                <input name="pro_price" value="{EDIT.pro_price}"type="text">
+                <span style="color: red">{pro_price_err_mess}</span>
+            </td>
+        </tr> 
+        <tr>
+            <th>Product Quantity</th>
+            <td>
+                <input name="pro_quantity" value="{EDIT.pro_quantity}"type="text">
+                <span style="color: red">{pro_quantity_err_mess}</span>
+            </td>
+        </tr>
+        <tr>
+            <th>Product Image</th>
+            <td >
+                <div class="box">
+                    <img class="thumbnail box-center" id="preview_img" alt="No image" src="../../{EDIT.pro_img}">
+                </div>
+                <h5 style="font-weight: bolder;">Please choose a file on your computer.</h5>
+                <input type="file" name="upload_file_added" style="margin: auto;">
+                <span style="color: red">{pro_img_err_mess}</span>
+            </td>
+        </tr> 
+    </table>
+    <input type="button" data-id="{EDIT.pro_id}" onclick="goDelete()" id="deleteButton" value="Delete"></button>
+    <input type="submit" id="editButton" value="Update"></button>
+    </form> 
+</body>
+</html>
+<script>
+    function goDelete(){
+        $(document).on('click','#deleteButton',function(){
+            var id = $(this).attr('data-id');
+            var y = confirm("Are you sure want to delete this product? This will delete all the information of this product !");
+            if(y==false) return 0;
+            window.location.assign("../../product/delete&id="+id+"/"); 
+        })
+    }
+</script>
+
+<!-- END: EDIT -->

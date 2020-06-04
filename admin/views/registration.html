@@ -1,0 +1,140 @@
+ <!-- BEGIN: REGISTER -->
+ <html>
+    <head>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">        
+            <div class="form">
+                <div class="textform">
+                    <div id="btn"></div>
+                    <button class="toggle-btn" style="color: white; font-weight: bolder;">REGISTER</button>
+                </div>
+                <form id="register" class="input-group" method="POST">
+                    <input type="text" name="user_name" class="input-field" placeholder="Full Name"required>
+                    <input type="text" name="user_email" class="input-field" placeholder="Email"required>
+                    <input type="password" name="user_password" class="input-field" placeholder="Password"required>
+                    <input type="password" name="user_retype_password" class="input-field" placeholder="Retype Password"required>
+                    <button type="submit"  style="color: white;margin-top: 2.5%; font-weight: bolder;margin-bottom: 2.5%;" class="submit-field">REGISTER</button>
+                    <p style="display: inline;">Already Have Account?</p><a href="login.php">Sign In Here</a>
+                </form>
+            </div>
+        </div>
+    </body>
+    <style>
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    .container{
+        background: linear-gradient(to left, rgb(2, 81, 112), rgb(11, 3, 122));  
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+    }
+    .form{
+        width: 380px;
+        height: 500px;
+        position: relative;
+        margin: 6% auto;
+        background: #fff;
+        padding: 5px;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    .textform {
+        width: 220px;
+        margin:35px auto;
+        position: relative;
+        border-radius: 30px;
+    }
+    input[type=text]{
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+    input[type=password]{
+        border-radius: 10px;
+        padding-left: 10px;
+    
+    }
+    .toggle-btn{
+        padding: 10px 25px;
+        background: transparent;
+        border: 0;
+        outline: none;
+        position:relative;
+        left: 55px;
+
+
+    }
+    #btn{
+        top:0;
+        margin: 0 auto;
+        position: absolute;
+        width: 110px;
+        height: 35px;            
+        background: linear-gradient(to left, rgb(2, 81, 112), rgb(11, 3, 122));  
+        border-radius: 30px;
+        transition: .5s;
+        left: 55px;
+
+        text-align: center;
+    }
+    .input-group{
+        top:180px;
+        position: absolute;
+        width: 280px;
+        transition: .5s;
+    }
+    .input-group a{
+        padding-left: 20px;
+        text-decoration: none;
+    }
+    .input-group a:hover{
+        color:darkblue;
+        text-decoration: underline;
+
+    }
+    .input-field{
+        width:100%;
+        padding: 10px 0;
+        margin: 5px 0;
+        border-left:0;
+        border-right:0;
+        border-top:0;
+        border-bottom:1px gray solid;
+        outline: none;
+        background: transparent;
+    }
+    .submit-field{
+        width: 85%;
+        padding: 10px 30px;
+        cursor: pointer;
+        display: block;
+        margin: auto;        
+        background: linear-gradient(to left, rgb(2, 81, 112), rgb(11, 3, 122));  
+        border: 0;
+        outline: none;
+        border-radius: 30px;
+    }
+    .checkbox{
+        margin: 30px 10px 30px 0;
+    }
+    span{
+        color: #777;
+        font-size: 12px;
+        border-radius: 30px;
+    }
+    #login{
+        left:50px;
+    }
+    #register{
+        left:50px;
+    }
+    </style>
+</html>
+<!-- END: REGISTER -->

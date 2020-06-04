@@ -1,0 +1,102 @@
+<!-- BEGIN: LISTSEARCH -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <script src="https://kit.fontawesome.com/7c67c69820.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>  
+  <meta charset="utf-8">
+  <style>
+      .search-bar{
+        width: 100%;
+        position: fixed;
+        margin:30px;
+      }
+      .search-bar input{
+        border-radius: 10px;
+        padding-left: 10px;
+        border: 1px solid gray;
+        height: 30px;
+        outline: none;
+
+      }
+      ::-webkit-scrollbar {
+          width: 12px;
+      }
+      
+      ::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+          border-radius: 10px;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+      }
+      @media only screen and (max-width: 1000px){
+          .body-left{
+              margin-top: 6.5%;
+          }
+      }
+      @media only screen and (max-width: 750px){
+          .body-left{
+              margin-top: 8%;
+          }
+          .search-bar{
+            position: fixed;
+          }
+      }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+  </head>
+<form>
+  <body>
+    <div class="container-fluid">           
+      <div class="search-bar">
+        <input type="text" id="search_text" placeholder="Search... "  name="txtSearch">
+      </div>
+      <div id="result"></div>
+    </div>
+       
+  </body>
+  </form>
+  </html>
+  <script>
+    $(document).ready(function(){
+      load_data();
+
+      function load_data(query){
+        $.ajax({
+          url:'../../search/search.php',
+          method:'GET',
+          data:{query:query},
+          dataType:'text',
+          success:function(data){
+            $('#result').html(data);
+          },
+          error:function(){
+            alert("dcmm");
+          }
+        })
+      }
+      
+      $('#search_text').keyup(function(){
+        var txt = $(this).val();
+        if(txt != ''){
+            load_data(txt);
+        }
+        else{
+          load_data();
+        }
+      })
+    })
+  </script>
+
+<!-- END: LISTSEARCH -->

@@ -1,0 +1,54 @@
+<!-- BEGIN: LIST -->
+<html>
+    <div class="search-bar">
+        <input type="text" placeholder="Search... "  id="search_text" name="txtSearch">
+    </div>
+    <div id="result"></div>
+</html>
+<style>
+    .search-bar{
+        width:30%;
+        position: fixed;
+        margin-left: 100px;
+    }
+    .search-bar input{
+        border-radius: 10px;
+        padding-left: 10px;
+        border: 1px solid gray;
+        height: 30px;
+        outline: none;
+
+    }
+    th,td{
+        text-align: center;
+    }
+</style>
+<script> 
+    $(document).ready(function(){
+        load_data();
+        function load_data(query){
+            $.ajax({
+            url:'../../search/search_customers.php',
+            method:'GET',
+            data:{query:query},
+            dataType:'text',
+            success:function(data){
+                $('#result').html(data);
+            },
+            error:function(){
+                alert("dcmm");
+            }
+            })
+        }
+        $('#search_text').keyup(function(){
+            var txt = $(this).val();
+            if(txt != ''){
+                load_data(txt);
+            }
+            else{
+                load_data();
+            }
+        })
+    })
+</script>
+<!-- END: LIST -->

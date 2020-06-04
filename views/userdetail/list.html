@@ -1,0 +1,69 @@
+<!-- BEGIN: CARD -->
+<header>
+    <title>Detail</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/7c67c69820.js" crossorigin="anonymous"></script>
+</header>
+<body>
+    <div class="account-detail">
+        <h3>Account Settings</h3>
+        <div class="login-body">
+            <form class="login-form" method="POST">
+                <img src="img/default.png" style="margin-right: 20px;" alt="">
+                <input type="file" name="" id="">
+                <button class="btn btn-light"><a href="?m=userdetail&a=history&id={CARD.cus_id}">Shopping History</a></button>
+                <div class="form-row" style="margin-top: 20px;">
+                    <div class="col">
+                        <div class="md-form">
+                            <label for="materialRegisterFormFirstName" class="mt-2">First Name</label>
+                            <input type="text" id="materialRegisterFormFirstName" class="form-control" value="{CARD.cus_firstname}">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="md-form">
+                            <label for="materialRegisterFormLastName" class="mt-2">Last Name</label>
+                            <input type="text" id="materialRegisterFormLastName" class="form-control" value="{CARD.cus_lastname}">
+                        </div>
+                    </div>
+                    <div class="row ml-1">
+                        <label for="materialRegisterFormLastName" class="mt-2">Email</label>
+                        <input type="text"id="materialRegisterFormFirstName" class="form-control" value="{CARD.cus_email}">
+                        <label for="materialRegisterFormLastName" class="mt-2">Password</label>
+                        <input type="password" id="materialRegisterFormFirstName" class="form-control" value="{password}">
+                        <label for="materialRegisterFormLastName" class="mt-2">Phone</label>
+                        <input type="text" id="materialRegisterFormFirstName" class="form-control" value="{CARD.cus_phonenumber}">
+                        <label for="" class="w-100 mt-2">Address</label>
+                        <input type="text" name="cus_address" placeholder="Your Address" style="min-width: 150px;" value="{CARD.cus_address}" class="form-control mb-3" id="">
+                    </div>      
+                </div>
+                    <button type="button" onclick="goLogout()" class="btn btn-secondary">Logout</button>
+                    <button type="submit" class="btn btn-success">Save</button>
+                </form>
+            </div>
+    </div>
+</body>
+<style>
+.account-detail{
+    margin: 20px auto;
+    width: 50%;
+    height: 700px;
+}
+.login-form img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.login-form button{
+    float: right;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+</style>    
+<script>
+    function goLogout(){
+        window.location.assign("logout.php");
+    }
+</script>
+<!-- END: CARD -->

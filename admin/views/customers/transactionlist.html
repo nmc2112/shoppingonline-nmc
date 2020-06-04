@@ -1,0 +1,30 @@
+<!-- BEGIN: LIST -->
+<html>
+    <table class="table table-responsive w-100">
+        <tr>
+            <th>#</th>
+            <th>Transaction ID</th>
+            <th>Transaction Product</th>
+            <th>Transaction Amount(5% Tax)</th>
+            <th>Transaction Address</th>
+            <th>Transaction Date</th>
+        </tr>
+        <!-- BEGIN: ROW -->
+        <tr>
+            <td>{nbr}</td>
+            <td>{ROW.trans_id}</td>
+            <td>{ROW.trans_product}</td>
+            <td>${ROW.trans_amount}</td>
+            <td>{ROW.trans_address}</td>
+            <td>{ROW.trans_createdate}</td>
+        </tr>
+        <!-- END: ROW -->
+    </table>
+    <p>{noData}</p>
+</html>
+<style>
+    td,th{
+        text-align: center;
+    }
+</style>
+<!-- END: LIST -->

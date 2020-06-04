@@ -1,0 +1,387 @@
+<!-- BEGIN: LAYOUT-->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/7c67c69820.js" crossorigin="anonymous"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+<nav class="navbar sticky-top navbar-expand-lg " style="background: rgb(30, 31, 30);">
+  <a href="?m=home&a=home" style="text-decoration: none;"><h4 style="color: white;">HOME</h4></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" style="color:black"><i class="fas fa-bars"></i></span>
+  </button>
+
+  <div class="collapse navbar-collapse my-menu" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto ">
+      <li class="nav-item dropdown">
+        <a class="nav-link nav-menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Apple</a>
+        
+        <div class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
+
+          
+            <div class="container">
+              <div class="row p-3" >
+                <div class="col-md-3">
+                  <span class="text-uppercase text-dark font-weight-bolder"><h6>iPhone</h6></span>
+                  <ul class="nav flex-column text-left">
+                  <li class="nav-item m-0 p-0 ">
+                    <a class="nav-link active " href="#">iPhone 11 Pro Max</a>
+                  </li>
+                  <li class="nav-item m-0 p-0 ">
+                    <a class="nav-link" href="#">iPhone 11</a>
+                  </li>
+                  <li class="nav-item m-0 p-0 ">
+                    <a class="nav-link" href="#">iPhone XS Max</a>
+                  </li>
+                </ul>
+                </div>
+                <!-- /.col-md-3  -->
+                <div class="col-md-3">
+                  <span class="text-uppercase text-dark font-weight-bolder"><h6>iPad</h6></span>
+                  <ul class="nav flex-column text-left">
+                  <li class="nav-item m-0 p-0 ">
+                    <a class="nav-link active" href="#">iPad Pro</a>
+                  </li>
+                  <li class="nav-item m-0 p-0 ">
+                    <a class="nav-link" href="#">iPad Mini</a>
+                  </li>
+                  <li class="nav-item m-0 p-0 ">
+                    <a class="nav-link" href="#">iPad Air</a>
+                  </li>
+                </ul>
+                </div>
+                <!-- /.col-md-3  -->
+                <div class="col-md-3">
+                    <span class="text-uppercase text-dark font-weight-bolder"><h6>Watch</h6></span>
+                    <ul class="nav flex-column text-left">
+                    <li class="nav-item m-0 p-0 ">
+                      <a class="nav-link active" href="#">Apple Watch Series 5</a>
+                    </li>
+                    <li class="nav-item m-0 p-0 ">
+                      <a class="nav-link" href="#">Apple Watch Nike</a>
+                    </li>
+                    <li class="nav-item m-0 p-0 ">
+                      <a class="nav-link" href="#">Apple Watch Series 3</a>
+                    </li>
+                  </ul>
+                </div>
+                <!-- /.col-md-3  -->
+                <div class="col-md-3">
+                    <span class="text-uppercase text-dark font-weight-bolder"><h6>TV</h6></span>
+                    <ul class="nav flex-column text-left">
+                    <li class="nav-item m-0 p-0 ">
+                      <a class="nav-link active" href="#">Apple TV+</a>
+                    </li>
+                    <li class="nav-item m-0 p-0 ">
+                      <a class="nav-link" href="#">Apple TV App</a>
+                    </li>
+                    <li class="nav-item m-0 p-0 ">
+                      <a class="nav-link" href="#">Apple TV 4K</a>
+                    </li>
+                  </ul>
+                  </div>
+                  <!-- /.col-md-3  -->
+              </div>
+            </div>
+            <!--  /.container  -->
+  
+  
+          </div>
+
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-menu" href="#">Samsung</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-menu" href="#">Microsoft</a>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link nav-menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Oppo
+        </a>
+        <div class="dropdown-menu mt-4" aria-labelledby="navbarDropdown">
+
+         
+        </div>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link nav-menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Huawei
+        </a>
+        <div class="dropdown-menu mt-4" aria-labelledby="navbarDropdown">
+
+
+
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nav-menu" href="?m=userdetail&a=list">
+          Account
+        </a>
+      </li>
+
+    </ul>
+
+
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-dark" ><i style="color: white;" class="fas fa-search"></i></button>
+    </form>
+
+
+  </div>
+</nav>
+<div class="content" >{content}
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button> 
+</div>
+<a href="?m=cart&a=list">
+  <div id="myCart">
+    <i class="fas fa-shopping-bag" style="height: 20px;"></i>
+    <span style="margin-left: 5px; color: white;" class="badge badge-pill badge-secondary">{totalCount}</span></div>
+</a>
+<footer class="page-footer font-small text-white pt-4" style="background-color: rgb(0, 0, 0); bottom: 0;">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Footer Content</h5>
+        <p>Here you can use rows and columns to organize your footer content.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</body>
+</html>
+<style>
+
+
+  /* adds some margin below the link sets  */
+.navbar .dropdown-menu div[class*="col"] {
+margin-bottom:1rem;
+    }
+.navbar .dropdown-menu {
+border:none;
+background-color:white!important;
+}
+.navbar{
+    background: white;
+    border-bottom: 1px solid grey;
+}
+.nav-menu{
+    color:rgba(255, 255, 255, 0.76);
+}
+.nav-menu:hover{
+    color: white;
+}
+#logo{
+    height: 50px;
+    width: 50px;
+}
+.my-menu{
+    margin-left:26%;
+}
+.row{
+    width: 100%;
+}
+/* breakpoint and up - mega dropdown styles */
+@media screen and (min-width: 992px) {
+
+/* remove the padding from the navbar so the dropdown hover state is not broken */
+.navbar {
+padding-top:0px;
+padding-bottom:0px;
+}
+
+/* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+.navbar .nav-item {
+padding:.5rem .5rem;
+margin:0 .25rem;
+}
+
+/* makes the dropdown full width  */
+.navbar .dropdown {position:static;}
+
+.navbar .dropdown-menu {
+width:100%;
+left:0;
+right:0;
+/*  height of nav-item  */
+top:45px;
+}
+
+/* shows the dropdown menu on hover */
+.navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+display:block!important;
+}
+}
+.navbar .dropdown-menu {
+    border: 1px solid rgba(0,0,0,.15);
+    background-color: #fff;
+}
+#myBtn{
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; 
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    background-color: rgb(30, 31, 30);
+    color: white;
+    border-radius: 50%;
+}
+#myBtn:hover {
+  color: black;
+  background-color:white;
+  transition-duration: 0.5s;
+}
+
+#myCart{
+    position: fixed;
+    top: 80px;
+    right: 30px;
+    z-index: 99; 
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: rgb(30, 31, 30);
+    cursor: pointer;
+    padding: 11px;
+    border-radius: 10px;
+    color: white;
+
+}  
+#myCart:hover {
+color: black;
+background-color:white;
+transition-duration: 0.5s;
+
+}
+.content{
+  min-height: 600px;
+}
+
+</style>
+<script>
+$(document).ready(function() {
+  $(window).resize(function(){
+    if ($(window).width() >= 980){	
+
+        // when you hover a toggle show its dropdown menu
+        $(".navbar .dropdown-toggle").hover(function () {
+          $(this).parent().toggleClass("show");
+          $(this).parent().find(".dropdown-menu").toggleClass("show"); 
+        });
+
+          // hide the menu when the mouse leaves the dropdown
+        $( ".navbar .dropdown-menu" ).mouseleave(function() {
+          $(this).removeClass("show");  
+        });
+    
+      // do something here
+    }	
+  }); 
+});
+var mybutton = document.getElementById("myBtn");
+    // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+  
+function scrollFunction() {
+  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    mybutton.style.display = "block";
+  } 
+  else {
+    mybutton.style.display = "none";
+
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}  
+
+
+
+// document ready  
+
+</script>
+<!-- END: LAYOUT-->

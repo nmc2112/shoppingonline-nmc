@@ -1,0 +1,142 @@
+<!-- BEGIN: LIST -->
+<html>
+<header>
+    <title>CART LIST</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://kit.fontawesome.com/7c67c69820.js" crossorigin="anonymous"></script>
+</header>
+<body>
+<div id="editquantity" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Quantity</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+            <input type="number" id="quantity_edited" min="1" value="{CARTLIST.pro_cusquantity}" style="width: 100%; border-radius: 10px; outline: none; border:1px solid gray; padding-left: 10px">
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="submit" id="btnUpdate" class="btn btn-success">Save</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            </div>
+      
+          </div>
+      </div>
+</div>
+
+<div class="container-fluid row">
+    <div class="table-responsive mt-3 col-12 col-md-8">
+        <table class="table table bordered">
+        <tr>
+            <th>#</th>
+            <th width="40%">Item</th>
+            <th>Unit Cost</th>
+            <th>Quantity</th>
+            <th>Sub Total</th>
+            <th colspan="2">Action</th>
+        </tr>
+        <!-- BEGIN: CARTLIST -->
+        <tr>
+            <td>{nbr}</td>
+            <td>
+                <img src="{CARTLIST.pro_img}" style="height: 166px; width: 150px; float: left; margin-right: 10px;" alt="">
+                <div style="float: left;">
+                    <p style="font-weight: 600; display: inline;">{CARTLIST.pro_name}</p>
+                    <p style="font-size: 15px; color: gray; text-align: left;">{CARTLIST.cat_name}</p>
+                </div>
+            </td>
+            <td>${CARTLIST.pro_price}</td>
+            <td>
+                <p>{qty}</p>
+            </td>
+            <td><p style="display: inline;">${total}</p></td>
+            <td>
+                <button data-id="{id}"  data-value="{qty}" data-toggle="modal" data-target="#editquantity" type="button" id="btnEdit" class="btn btn-sm btn-info"><i class="fas fa-edit"></i></button>
+                <button data-id="{id}" type="button" id="btnDelete" onclick="goDelete()"class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td>
+        </tr>
+        <!-- END: CARTLIST -->
+        </table>
+        <span style="padding-left: 10%;">{warning}</span>
+    </div>
+    <div class="col-12 col-md-4 list-item">
+        <p class="mt-3" style="text-align: center;">{nbr} Items in your bag</p>
+        <table class="table table bordered">
+            <tr>
+                <td style="text-align: left;">Sub Total</td>
+                <td style="text-align: right;">${total}</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">Tax (5%)</td>
+                <td style="text-align: right;">${tax}</td>
+            </tr>
+            <tr>
+                <td style="text-align: left;">Shipping</td>
+                <td style="text-align: right;">0</td>
+            </tr>
+            <tr>
+                <th style="text-align: left;">Grand Total</th>
+                <td style="text-align: right;"><h5>${totalBill}</h5></td>
+            </tr>
+        </table>
+        <div style="float: right;">
+            <button class="btn btn-info" onclick='window.location.assign("?m=home&a=home")'>Return To Shop <i class="fas fa-undo"></i></button>
+            <button class="btn btn-success" onclick='window.location.assign("?m=payment&a=payment")' >Check Out <i class="fas fa-exchange-alt"></i></button>
+        </div>
+    </div>
+</div>
+</body>
+<style>
+    th,td{
+        text-align: center;
+    }
+    #editquantity{
+        margin: 0 auto;
+    }
+    .list-item{
+        border: 1px solid gray;
+        height: 320px;
+        position: fixed;
+        right:0;
+        margin-top: 100px;
+    }
+    @media screen and (max-width: 900px){
+        .list-item{
+            position: relative;
+            margin-top: 10px;
+        }
+    }
+</style>
+<script>
+    function goDelete(){
+        $(document).on('click','#btnDelete',function(){
+            var id = $(this).attr('data-id');
+            var y = confirm("Are you sure want to delete this product?");
+            if(y==false) return 0;
+            window.location.assign("?m=cart&a=delete&id="+id); 
+        })
+    }    
+    function goEdit(){
+        $(document).on('click','#btnEdit',function(){
+            var ID = $(this).attr('data-id');
+            var val = $(this).attr('data-value');
+            $('#quantity_edited').val(val);
+            $(document).on('click','#btnUpdate',function(){
+                var qty = document.getElementById('quantity_edited');
+                window.location.assign("?m=cart&a=quantity&id="+ID+"&pro_cusquantity="+qty.value);
+            }) 
+        })
+    }
+    $(document).ready(function(){
+        goEdit();
+    })
+</script>
+</html>
+<!-- END: LIST -->

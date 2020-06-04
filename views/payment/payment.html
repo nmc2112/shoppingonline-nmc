@@ -1,0 +1,93 @@
+<!-- BEGIN: PAYMENT -->
+<html>
+<header>
+    <title>PAYMENT</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://kit.fontawesome.com/7c67c69820.js" crossorigin="anonymous"></script>
+</header>
+<div class="container row m-auto">
+  <div class="col-md-7 col-12">
+  <h5 class="my-4 ">Delivery Information</h5>
+  <form action='?m=checkout&a=list' method="POST" id="payment-form">
+      <div class="form-row">
+          <label for="" class="w-100">First Name <input type="text" name="cus_firstname" value="{PAYMENT.cus_firstname}" class="form-control mb-3" id=""required></label>
+          <label for="" class="w-100">Last Name <input type="text" name="cus_lastname" value="{PAYMENT.cus_lastname}" class="form-control mb-3" id=""required></label>
+          <label for="" class="w-100">Email <input type="email" name="cus_email" value="{PAYMENT.cus_email}" class="form-control mb-3" id=""required></label>
+          <label for="" class="w-100">Phone Number <input type="text" name="cus_phonenumber" value="{PAYMENT.cus_phonenumber}" class="form-control mb-3" id=""required></label>
+          <label for="" class="w-100">Nationality<input type="text" name="cus_nation" value="{PAYMENT.cus_nation}" class="form-control mb-3" id=""required></label>
+          <label for="" class="w-100">Address <input type="text" name="cus_address" value="{PAYMENT.cus_address}" style="min-width: 150px;" class="form-control mb-3" id=""required></label>
+        
+          <label for="card-element">Credit or debit card</label>
+        
+          <div id="card-element" class="form-control">
+            <!-- A Stripe Element will be inserted here. -->
+          </div>
+      
+          <!-- Used to display Element errors. -->
+          <div id="card-errors" style="color: red;" role="alert"></div>
+      </div>
+    
+      <button class="btn btn-primary w-100 mt-2">Submit Payment</button>
+  </form>
+  </div>
+  <div class="col-md-5 col-12 list-item" style="border-left:1px solid rgb(211, 211, 211)">
+    <table class="table table bordered my-4 ml-3">
+      <!-- BEGIN: LIST -->
+      <tr>
+        <td class="mb-2">
+          <div style="display: inline;" class="ml-2">
+            <img src="{LIST.pro_img}" width="70px" alt="" style="display: inline;border-radius: 10px;">
+            <span id="quantity" >{qty}</span>
+          </div>
+          <h5 style="display: inline; margin-left: 10px;">{LIST.pro_name}</h5>
+        </td> 
+        <td style="text-align: right;">
+          ${total}
+        </td>
+      </tr>
+      <!-- END: LIST -->
+      <tr>
+          <td style="text-align: left;">Provisional Total</td>
+          <td style="text-align: right;">${total}</td>
+      </tr>
+      <tr>
+          <td style="text-align: left;">Tax(5%)</td>
+          <td style="text-align: right;">${tax}</td>
+      </tr>
+      <tr>
+          <td style="text-align: left;">Shipping Fee</td>
+          <td style="text-align: right;">0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left;"><h4>Total</h4></td>
+          <td style="text-align: right;"><h4>${totalBill}</h4></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="js/charge.js"></script>
+<style>
+.list-item{
+  margin-top: 50px;
+}
+#quantity{
+  position: absolute; 
+  margin: -2; 
+  background: #918f8f;
+  border-radius: 50%;
+  color: white;
+  height: 25px;
+  width: 25px;
+  left:100px;
+  display: inline;
+  text-align: center;
+}
+</style>
+</html>
+
+
+
+<!-- END: PAYMENT -->
+
