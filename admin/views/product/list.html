@@ -1,5 +1,6 @@
 <!-- BEGIN: LIST -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <html>
 <style>
     table{
@@ -92,8 +93,10 @@
 <div class="container-fluid">
 <form method="POST" enctype="multipart/form-data">
     <h5>{CategoryName} <span class="badge badge-secondary badge-pill">{count}</span></h5>
-    <div class="search-bar">
-        <input type="text" placeholder="Search... " name="txtSearch" id="search_text" value="{keyword}" name="txtSearch">
+    <div class="form-inline ml-3">
+        <div class="input-group input-group-md">
+          <input class="form-control form-control" id="search_text" name="txtSearch" type="text" placeholder="Search" aria-label="Search">
+        </div>
     </div>
     <input type="button" id="addBtn" data-toggle="modal" data-target="#addproduct" value="Add Product">
     <input  type="button" id="deleteBtn" class="btn btn-sm btn-danger" value="Delete Product" onclick="deleteThis()">
@@ -212,5 +215,11 @@
     }
 
 </script>
+<style>
+    #category{
+      background-color: royalblue;
+    }
+  </style>
 </html>
+
 <!-- END: LIST -->

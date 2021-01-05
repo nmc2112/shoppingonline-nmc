@@ -27,7 +27,7 @@
         ";
         $table = $db->fetchAll($sql);
     }
-    $output='<br><br><br><br>';
+    $output='<br>';
     if(count($table)>0){
         $output .= '
             <div class="table-responsive">
@@ -54,6 +54,6 @@
         echo $output;
     }
     else{
-        echo '<br><br><br><br>Data Not Found';
+        echo 'Data Not Found';
     }
 

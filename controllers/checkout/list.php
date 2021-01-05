@@ -45,7 +45,7 @@
     
     
     if($db->executeSQL($sql)){
-        $f->redir("?m=succeed&a=succeed&id=".$charge->id);
+        $f->redir("../succeed&id=".$charge->id);
     }
     $xtp->parse('LIST');
     $acontent = $xtp->text('LIST');

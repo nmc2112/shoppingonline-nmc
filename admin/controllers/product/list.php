@@ -3,7 +3,7 @@
 
     /* Add product */
     $do_save = 1;
-    $arrFileType = array('png','jpg','gif','svg');
+    $arrFileType = array('png','jpg','gif','svg','jfif');
     $urlServer = '../.././img';
     $urlServer_copy = 'img';
     $maxSize    = 10000000;

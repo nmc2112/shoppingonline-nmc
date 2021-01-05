@@ -12,8 +12,7 @@
         foreach($tbl as $r){
             $xtp->assign('LIST',$r);
         }
-    }
-    else $f->redir("?m=home&a=home");    
+    }   
         
     if($_POST){
         $count = count($_SESSION['cartlist']);
@@ -26,7 +25,7 @@
         }
         if($flag==0){
             array_push($_SESSION['cartlist'],array('id'=>$id,'qty'=>1));    
-            $f->redir("?m=cart&a=list");
+            $f->redir("../cart/list");
         }
     }
 

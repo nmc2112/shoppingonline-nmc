@@ -32,8 +32,8 @@
       </div>
 </div>
 
-<div class="container-fluid row">
-    <div class="table-responsive mt-3 col-12 col-md-8">
+<div class="container-fluid row mt-3">
+    <div class="table-responsive col-12 col-md-8">
         <table class="table table bordered">
         <tr>
             <th>#</th>
@@ -59,8 +59,8 @@
             </td>
             <td><p style="display: inline;">${total}</p></td>
             <td>
-                <button data-id="{id}"  data-value="{qty}" data-toggle="modal" data-target="#editquantity" type="button" id="btnEdit" class="btn btn-sm btn-info"><i class="fas fa-edit"></i></button>
-                <button data-id="{id}" type="button" id="btnDelete" onclick="goDelete()"class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button></td>
+                <button data-id="{id}"  data-value="{qty}" data-toggle="modal" data-target="#editquantity" type="button" id="btnEdit" class="btn btn-sm"><i class="fas fa-pen"></i></button>
+                <button data-id="{id}" type="button" id="btnDelete" onclick="goDelete()"class="btn btn-sm"><i class="fas fa-trash"></i></button></td>
         </tr>
         <!-- END: CARTLIST -->
         </table>
@@ -87,8 +87,8 @@
             </tr>
         </table>
         <div style="float: right;">
-            <button class="btn btn-info" onclick='window.location.assign("?m=home&a=home")'>Return To Shop <i class="fas fa-undo"></i></button>
-            <button class="btn btn-success" onclick='window.location.assign("?m=payment&a=payment")' >Check Out <i class="fas fa-exchange-alt"></i></button>
+            <button class="btn btn-info" onclick='window.location.assign("../home")'>Return To Shop <i class="fas fa-undo"></i></button>
+            <button class="btn btn-success" onclick='window.location.assign("../payment")' >Check Out <i class="fas fa-exchange-alt"></i></button>
         </div>
     </div>
 </div>
@@ -102,15 +102,13 @@
     }
     .list-item{
         border: 1px solid gray;
-        height: 320px;
+        height: 360px;
         position: fixed;
         right:0;
-        margin-top: 100px;
     }
     @media screen and (max-width: 900px){
         .list-item{
             position: relative;
-            margin-top: 10px;
         }
     }
 </style>
@@ -120,7 +118,7 @@
             var id = $(this).attr('data-id');
             var y = confirm("Are you sure want to delete this product?");
             if(y==false) return 0;
-            window.location.assign("?m=cart&a=delete&id="+id); 
+            window.location.assign("../cart/delete&id="+id); 
         })
     }    
     function goEdit(){
@@ -130,7 +128,7 @@
             $('#quantity_edited').val(val);
             $(document).on('click','#btnUpdate',function(){
                 var qty = document.getElementById('quantity_edited');
-                window.location.assign("?m=cart&a=quantity&id="+ID+"&pro_cusquantity="+qty.value);
+                window.location.assign("../cart/quantity&id="+ID+"&pro_cusquantity="+qty.value);
             }) 
         })
     }

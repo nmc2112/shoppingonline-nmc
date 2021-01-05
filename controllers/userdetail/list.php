@@ -19,12 +19,12 @@
             $sql = "INSERT INTO tblcustomers(cus_address) VALUES ('{$address}') WHERE cus_email = '{$_SESSION['cus_signin_email']}' ";
             $sql1 = "UPDATE tblcustomers SET cus_address = '{$address}' WHERE cus_email = '{$_SESSION['cus_signin_email']}' ";
             if($db->executeSQL($sql) && $db->executeSQL($sql1)){
-                $f->redir("?m=userdetail&a=list");
+                $f->redir("userdetail/list");
             }
         }
     }
     else{
-        $f->redir("login.php");
+        $f->redir("../login.php");
     }
     $xtp->parse('CARD');
     $acontent = $xtp->text('CARD');

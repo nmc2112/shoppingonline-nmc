@@ -47,24 +47,26 @@
           .search-bar{
             position: fixed;
           }
-      }
+        }
+    #search{
+      background-color: royalblue;
+    }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
 
   </head>
 <form>
   <body>
-    <div class="container-fluid">           
-      <div class="search-bar">
-        <input type="text" id="search_text" placeholder="Search... "  name="txtSearch">
+    <div class="form-inline ml-3">
+      <div class="input-group input-group-md">
+        <input class="form-control form-control" id="search_text" name="txtSearch" type="text" placeholder="Search" aria-label="Search">
       </div>
+    </div >
       <div id="result"></div>
     </div>
-       
   </body>
   </form>
   </html>
@@ -98,5 +100,4 @@
       })
     })
   </script>
-
 <!-- END: LISTSEARCH -->

@@ -6,4 +6,4 @@
     if($db->executeSQL($sql)){
         
     } */
-    $f->redir("?m=cart&a=list");
+    $f->redir("../cart/list");

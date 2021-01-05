@@ -27,8 +27,9 @@
             }
         }
         if(strlen($_SESSION['cus_signin_email'])>0){
-            if(isset($_SESSION['cartlist']) && !empty($_SESSION['cartlist'])) $f->redir("{$baseUrl}?m=payment&a=payment");
-            else $f->redir("{$baseUrl}?m=home&a=home");
+            $_SESSION['customer_wish_list'] = array();
+            if(isset($_SESSION['cartlist']) && !empty($_SESSION['cartlist'])) $f->redir("{$baseUrl}payment");
+            else $f->redir("{$baseUrl}home");
         }
     }
     

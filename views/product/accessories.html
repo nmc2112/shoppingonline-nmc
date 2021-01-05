@@ -1,0 +1,127 @@
+<!-- BEGIN: PRODUCT -->
+<main>
+    <div class="popular-items">
+        <div class="container">
+            <div class="row product-btn justify-content-between mb-40">
+                <div class="properties__button">
+                    <!--Nav Button  -->
+                    <nav>                                                      
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link" id="nav-All-tab" href="all"  aria-selected="true">All </a>
+                            <a class="nav-item nav-link" id="nav-Mac-tab" href="mac"  aria-selected="false">Mac </a>
+                            <a class="nav-item nav-link" id="nav-iPad-tab"  href="ipad"  aria-selected="false"> iPad </a>
+                            <a class="nav-item nav-link" id="nav-iPhone-tab"  href="iphone" aria-selected="false"> iPhone</a>
+                            <a class="nav-item nav-link" id="nav-TV-tab"  href="tv" role="tab" aria-controls="nav-TV" aria-selected="false"> TV </a>
+                            <a class="nav-item nav-link active" id="nav-Accessories-tab"  href="accessories" role="tab" aria-controls="nav-Accessories" aria-selected="false"> Accessories </a>
+                        </div>
+                    </nav>
+                    <!--End Nav Button  -->
+                </div>
+                <!-- Grid and List view -->
+                <div class="grid-list-view">
+                </div>
+                <!-- Select items -->
+                <div class="form-group" style="border:0" >
+                    <select class="form-control mdb-select md-form dropdown-danger" style="border:0" id="exampleFormControlSelect1">
+                        <option value="htl">Price high to low</option>
+                        <option value="lth">Price low to high</option>
+                        <option value="mp">Most popular</option>
+                    </select>
+                </div>
+                <input type="hidden" id="view" value="{view}">
+            </div>
+            <!-- Nav Card -->
+            <div class="tab-content" id="nav-tabContent">
+                
+                <div class="tab-pane fade show active" id="nav-Accessories" role="tabpanel" aria-labelledby="nav-Accessories-tab">
+                    <div class="row">
+                        <!-- BEGIN: ACCESS -->
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-popular-items mb-50 text-center">
+                                <div class="popular-img">
+                                    <img src="{ACCESS.pro_img}" alt="">
+                                    <div class="img-cap">
+                                        <a href="list&id={ACCESS.pro_id}"><span>View Details</span></a>
+                                    </div>
+                                    <div class="favorit-items">
+                                        <span class="flaticon-heart"></span>
+                                    </div>
+                                </div>
+                                <div class="popular-caption">
+                                    <h3><a href="list&id={ACCESS.pro_id}">{ACCESS.pro_name}</a></h3>
+                                    <span>$ {ACCESS.pro_price}</span>
+                                </div>
+                                <input type="hidden" id="id" value="{ACCESS.pro_id}">
+                            </div>
+                        </div>
+                        <!-- END: ACCESS -->
+                    </div>
+                </div>
+            </div>
+            <!-- End Nav Card -->
+        </div>
+    </section>
+    <!-- Latest Products End -->
+    <!--? Shop Method Start-->
+    <div class="shop-method-area">
+        <div class="container">
+            <div class="method-wrapper">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-method mb-40">
+                            <i class="ti-package"></i>
+                            <h6>Free Shipping Method</h6>
+                            <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-method mb-40">
+                            <i class="ti-unlock"></i>
+                            <h6>Secure Payment System</h6>
+                            <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                        </div>
+                    </div> 
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="single-method mb-40">
+                            <i class="ti-reload"></i>
+                            <h6>Secure Payment System</h6>
+                            <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Shop Method End-->
+</main>
+<script>
+    $(document).ready(function(){
+        $('.current').hide();
+        $('.nice-select').hide();
+        page = $('.active').val();
+        x = $('#exampleFormControlSelect1').css('display','block');
+        $('#exampleFormControlSelect1').change(function(){
+            x = $('#exampleFormControlSelect1').val();
+            window.location.assign('accessories&view='+x+'#'+page);
+        })
+        
+        view = $('#view').val();
+        ids = [];
+        $('.flaticon-heart').click(function(){
+            id = $(this).attr('data-id');
+            ids.push(id);
+            console.log(ids);
+            if(ids.length >= 1) window.location.assign('../wishlist&id='+ids+'&page=accessories');
+            console.log(ids.length);
+        })
+    })
+</script>
+<style>
+    select, option{
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
+    option:hover{
+        background: red;
+    }
+</style>
+<!-- END: PRODUCT -->

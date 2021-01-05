@@ -9,7 +9,7 @@
 <div class="container row m-auto">
   <div class="col-md-7 col-12">
   <h5 class="my-4 ">Delivery Information</h5>
-  <form action='?m=checkout&a=list' method="POST" id="payment-form">
+  <form action='checkout/list' method="POST" id="payment-form">
       <div class="form-row">
           <label for="" class="w-100">First Name <input type="text" name="cus_firstname" value="{PAYMENT.cus_firstname}" class="form-control mb-3" id=""required></label>
           <label for="" class="w-100">Last Name <input type="text" name="cus_lastname" value="{PAYMENT.cus_lastname}" class="form-control mb-3" id=""required></label>
@@ -74,7 +74,6 @@
 }
 #quantity{
   position: absolute; 
-  margin: -2; 
   background: #918f8f;
   border-radius: 50%;
   color: white;
@@ -83,6 +82,7 @@
   left:100px;
   display: inline;
   text-align: center;
+  padding-top: 5px;
 }
 </style>
 </html>

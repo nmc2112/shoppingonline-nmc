@@ -1,7 +1,7 @@
 <?php
     include("../libs/bootstrap.php");
     if($_SESSION['admin_signin_email']==''){
-        $f->redir("{$baseUrl}/dang-nhap.chau/");
+        $f->redir("{$baseUrl}admin/login/");
     }
     else{
         $axtp = new XTemplate('views/layout.html');
@@ -16,6 +16,7 @@
         $count = count($arr);
         $axtp->assign('user',$arr[$count-1]);
         $axtp->assign('content',$acontent);
+        $axtp->assign('category',$m);
         $axtp->parse('LAYOUT');
         $axtp->out('LAYOUT');
         }

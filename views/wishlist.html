@@ -1,0 +1,40 @@
+<!-- BEGIN: WISH -->
+<main>
+    <div class="popular-items pt-5">
+        <div class="container">
+            <!-- Section tittle -->
+            <div class="row justify-content-center">
+                <div class="col-xl-7 col-lg-8 col-md-10">
+                    <div class="section-tittle mb-70 text-center">
+                        <h2>Your Wish List</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <!-- BEGIN: LIST -->
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-popular-items mb-50 text-center">
+                        <div class="popular-img">
+                            <img src="{LIST.pro_img}" style="height: 350px;" alt="">
+                            <div class="img-cap">
+                              <a href="product/list&id={LIST.pro_id}"><span>View Details</span></a>
+                            </div>
+                        </div>
+                        <div class="popular-caption">
+                            <h3><a href="product/list&id={LIST.pro_id}">{LIST.pro_name}</a></h3>
+                            <span>$ {LIST.pro_price}</span>
+                        </div>
+                    </div>
+                </div>
+              <!-- END: LIST -->
+  
+            </div>
+            <!-- Button -->
+            <div class="row justify-content-center">
+                <div class="room-btn pt-70">
+                    <a href="product/all" class="btn view-btn1">View More Products</a>
+                </div>
+            </div>
+        </div>
+</main>
+<!-- END: WISH -->

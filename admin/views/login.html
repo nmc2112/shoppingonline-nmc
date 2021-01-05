@@ -1,139 +1,105 @@
 <!-- BEGIN: LOGIN -->
-<html>
-    <head>
-    <link rel="stylesheet" href="">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container">        
-            <div class="form">
-                <div class="textform">
-                    <div id="btn"></div>
-                        <button class="toggle-btn" style="color: white; font-weight: bolder;" >LOG IN</button>
-                </div>
-                <form id="login" class="input-group" method="POST">
-                    <input type="text" name="user_email" class="input-field" placeholder="User Email"required>
-                    <input type="password" name="user_password" class="input-field" placeholder="Password"required>
-                    <input type="checkbox" class="checkbox"><span>Remember Password</span>
-                    <button type="submit"name="submit"  style="color: white; font-weight: bolder;" class="submit-field">LOG IN</button>
-                    <br>
-                    <a href="">Forgot Password?</a> 
-                    <a href="registration.php">Register Here</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V18</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+<link rel="icon" href="../../images/logo.jpg" style="border-radius: 50%;" type="image/gif" sizes="16x16">
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../css/util.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+<!--===============================================================================================-->
+</head>
+<body style="background-color: #666666;">
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form" method="POST">
+					<span class="login100-form-title p-b-43">
+                        Login
+                    </span>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="user_email">
+						<span class="focus-input100"></span>
+						<span class="label-input100">Email</span>
+					</div>
+					
+					
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" name="user_password">
+						<span class="focus-input100"></span>
+						<span class="label-input100">Password</span>
+					</div>
+
+					<div class="flex-sb-m w-full p-t-3 p-b-32">
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<label class="label-checkbox100" for="ckb1">
+								Remember me
+							</label>
+						</div>
+
+						<div>
+							<a href="#" class="txt1">
+								Forgot Password?
+							</a>
+						</div>
+					</div>
+			
+
+					<div class="container-login100-form-btn">
+						<input type="submit" class="login100-form-btn" value="Login">
+                    </div>
                 </form>
-            </div>
-        </div>
-    </body>
-    <style>
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Source Sans Pro', sans-serif;
+				<div class="login100-more" style="background-image: url('../images/bg-01.jpg');">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
 
-        }
-        .container{
-            background: linear-gradient(to left, rgb(2, 81, 112), rgb(11, 3, 122));  
-            height: 100%;
-            width: 100%;
-            background-position: center;
-            background-size: cover;
-            position: absolute;
-        }
-        .form{
-            width: 380px;
-            height: 500px;
-            position: relative;
-            margin: 6% auto;
-            background: #fff;
-            padding: 5px;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        .textform {
-            width: 220px;
-            margin:35px auto;
-            position: relative;
-            border radius: 30px;
-        }
-        .toggle-btn{
-            padding: 10px 30px;
-            background: transparent;
-            border: 0;
-            outline: none;
-            position:relative;
-            left: 60px;
-        }
-        #btn{
-            top:0;
-            margin: 0 auto;
-            position: absolute;
-            width: 100px;
-            height: 35px;
-            background: linear-gradient(to left, rgb(2, 81, 112), rgb(11, 3, 122));  
-            border-radius: 30px;
-            transition: .5s;
-            left: 60px;
-        }
-        input[type=text]{
-            border-radius: 10px;
-            padding-left: 10px;
-        }
-        input[type=password]{
-            border-radius: 10px;
-            padding-left: 10px;
-        
-        }
-        .input-group{
-            top:180px;
-            position: absolute;
-            width: 280px;
-            transition: .5s;
-        }
-        .input-group a{
-            padding-left: 20px;
-            text-decoration: none;
-        }
-        .input-group a:hover{
-            color:darkblue;
-            text-decoration: underline;
+	
+	
+<!--===============================================================================================-->
+	<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../vendor/bootstrap/js/popper.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../vendor/daterangepicker/moment.min.js"></script>
+	<script src="../vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="../vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="../js/main.js"></script>
 
-        }
-        .input-field{
-            width:100%;
-            padding: 10px 0;
-            margin: 5px 0;
-            border-left:0;
-            border-right:0;
-            border-top:0;
-            border-bottom:1px gray solid;
-            outline: none;
-            background: transparent;
-        }
-        .submit-field{
-            width: 85%;
-            padding: 10px 30px;
-            cursor: pointer;
-            display: block;
-            margin: auto;
-            background: linear-gradient(to left, rgb(2, 81, 112), rgb(11, 3, 122));  
-            border: 0;
-            outline: none;
-            border-radius: 30px;
-        }
-        .checkbox{
-            margin: 30px 10px 30px 0;
-        }
-        span{
-            color: #777;
-            font-size: 12px;
-            border-radius: 30px;
-        }
-        #login{
-            left:50px;
-        }
-        #register{
-            left:450px;
-        }
-    </style>
+</body>
 </html>
 <!-- END: LOGIN -->

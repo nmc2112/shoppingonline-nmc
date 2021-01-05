@@ -11,9 +11,9 @@
         <h3>Account Settings</h3>
         <div class="login-body">
             <form class="login-form" method="POST">
-                <img src="img/default.png" style="margin-right: 20px;" alt="">
+                <img src="../img/default.png" style="margin-right: 20px;" alt="">
                 <input type="file" name="" id="">
-                <button class="btn btn-light"><a href="?m=userdetail&a=history&id={CARD.cus_id}">Shopping History</a></button>
+                <a class="btn btn-light"href="../userdetail/history&id={CARD.cus_id}">Shopping History</a>
                 <div class="form-row" style="margin-top: 20px;">
                     <div class="col">
                         <div class="md-form">
@@ -63,7 +63,7 @@
 </style>    
 <script>
     function goLogout(){
-        window.location.assign("logout.php");
+        window.location.assign("../logout.php");
     }
 </script>
 <!-- END: CARD -->

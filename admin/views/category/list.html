@@ -82,12 +82,17 @@
         outline: none;
 
     }
+    #category{
+        background-color: royalblue;
+    }
 </style>
 </head>
 <body>
-<div class="search-bar">
-    <input type="text" id="search_text" placeholder="Search... "  name="txtSearch">
-</div>
+<form class="form-inline ml-3">
+    <div class="input-group input-group-md">
+        <input class="form-control form-control" id="search_text" name="txtSearch" type="text" placeholder="Search" aria-label="Search">
+    </div>
+</form>
 <form method="POST">
     <div id="addname" class="modal fade" role="dialog"  aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered p-3">

@@ -2,342 +2,180 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../../img/logo.jpg" style="border-radius: 50%;" type="image/gif" sizes="16x16">
+        <title>Home - Shopping Online</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/7c67c69820.js" crossorigin="anonymous"></script>
-<!------ Include the above in your HEAD tag ---------->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{x}assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{x}assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{x}assets/css/flaticon.css">
+    <link rel="stylesheet" href="{x}assets/css/slicknav.css">
+    <link rel="stylesheet" href="{x}assets/css/animate.min.css">
+    <link rel="stylesheet" href="{x}assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="{x}assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="{x}assets/css/themify-icons.css">
+    <link rel="stylesheet" href="{x}assets/css/slick.css">
+    <link rel="stylesheet" href="{x}assets/css/nice-select.css">
+    <link rel="stylesheet" href="{x}assets/css/style.css">
 </head>
 <body>
-<nav class="navbar sticky-top navbar-expand-lg " style="background: rgb(30, 31, 30);">
-  <a href="?m=home&a=home" style="text-decoration: none;"><h4 style="color: white;">HOME</h4></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon" style="color:black"><i class="fas fa-bars"></i></span>
-  </button>
-
-  <div class="collapse navbar-collapse my-menu" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto ">
-      <li class="nav-item dropdown">
-        <a class="nav-link nav-menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Apple</a>
-        
-        <div class="dropdown-menu mt-2" aria-labelledby="navbarDropdown">
-
-          
-            <div class="container">
-              <div class="row p-3" >
-                <div class="col-md-3">
-                  <span class="text-uppercase text-dark font-weight-bolder"><h6>iPhone</h6></span>
-                  <ul class="nav flex-column text-left">
-                  <li class="nav-item m-0 p-0 ">
-                    <a class="nav-link active " href="#">iPhone 11 Pro Max</a>
-                  </li>
-                  <li class="nav-item m-0 p-0 ">
-                    <a class="nav-link" href="#">iPhone 11</a>
-                  </li>
-                  <li class="nav-item m-0 p-0 ">
-                    <a class="nav-link" href="#">iPhone XS Max</a>
-                  </li>
-                </ul>
+  <header>
+    <div class="search-model-box" style="display: none;">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-btn">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Searching key.....">
+            </form>
+        </div>
+    </div>
+    <!-- Header Start -->
+    <div class="header-area">
+        <div class="main-header header-sticky">
+            <div class="container-fluid">
+                <div class="menu-wrapper">
+                    <!-- Logo -->
+                    <div class="logo mb-2">
+                        <a href="{x}home"><img src="{x}img/logo.jpg" style="height: 80px;" alt=""></a>
+                    </div>
+                    <!-- Main-menu -->
+                    <div class="main-menu d-none d-lg-block">
+                        <nav>                                                
+                            <ul id="navigation">  
+                                <li><a href="{x}home" id="home">Home</a></li>
+                                <li><a href="{x}product/all" id="product">product</a>
+                                    <ul class="submenu">
+                                        <li><a href="{x}product/mac"> Mac</a></li>
+                                        <li><a href="{x}product/ipad"> iPad</a></li>
+                                        <li><a href="{x}product/iphone"> iPhone</a></li>
+                                        <li><a href="{x}product/tv"> TV</a></li>
+                                        <li><a href="{x}product/accessories"> Accessories</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{x}about" id="about">about</a></li>
+                                <li><a href="{x}wishlist" id="wishlist">Wish list</a></li>
+                                <li><a href="{x}contact" id="contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!-- Header Right -->
+                    <div class="header-right">
+                        <ul>
+                            <li>
+                                <div class="nav-search search-switch">
+                                    <span class="flaticon-search"></span>
+                                </div>
+                            </li>
+                            <li> <a href="{x}userdetail/list"><span class="flaticon-user"></span></a></li>
+                            <li>
+                                <div>
+                                    <a href="{x}cart/list">
+                                        <span class="flaticon-shopping-cart">    {totalCount}</span>
+                                    </a> 
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- /.col-md-3  -->
-                <div class="col-md-3">
-                  <span class="text-uppercase text-dark font-weight-bolder"><h6>iPad</h6></span>
-                  <ul class="nav flex-column text-left">
-                  <li class="nav-item m-0 p-0 ">
-                    <a class="nav-link active" href="#">iPad Pro</a>
-                  </li>
-                  <li class="nav-item m-0 p-0 ">
-                    <a class="nav-link" href="#">iPad Mini</a>
-                  </li>
-                  <li class="nav-item m-0 p-0 ">
-                    <a class="nav-link" href="#">iPad Air</a>
-                  </li>
-                </ul>
+                <!-- Mobile Menu -->
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
                 </div>
-                <!-- /.col-md-3  -->
-                <div class="col-md-3">
-                    <span class="text-uppercase text-dark font-weight-bolder"><h6>Watch</h6></span>
-                    <ul class="nav flex-column text-left">
-                    <li class="nav-item m-0 p-0 ">
-                      <a class="nav-link active" href="#">Apple Watch Series 5</a>
-                    </li>
-                    <li class="nav-item m-0 p-0 ">
-                      <a class="nav-link" href="#">Apple Watch Nike</a>
-                    </li>
-                    <li class="nav-item m-0 p-0 ">
-                      <a class="nav-link" href="#">Apple Watch Series 3</a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- /.col-md-3  -->
-                <div class="col-md-3">
-                    <span class="text-uppercase text-dark font-weight-bolder"><h6>TV</h6></span>
-                    <ul class="nav flex-column text-left">
-                    <li class="nav-item m-0 p-0 ">
-                      <a class="nav-link active" href="#">Apple TV+</a>
-                    </li>
-                    <li class="nav-item m-0 p-0 ">
-                      <a class="nav-link" href="#">Apple TV App</a>
-                    </li>
-                    <li class="nav-item m-0 p-0 ">
-                      <a class="nav-link" href="#">Apple TV 4K</a>
-                    </li>
-                  </ul>
-                  </div>
-                  <!-- /.col-md-3  -->
-              </div>
             </div>
-            <!--  /.container  -->
-  
-  
-          </div>
-
-      </li>
-      <li class="nav-item">
-        <a class="nav-link nav-menu" href="#">Samsung</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link nav-menu" href="#">Microsoft</a>
-      </li>
-      <li class="nav-item dropdown ">
-        <a class="nav-link nav-menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Oppo
-        </a>
-        <div class="dropdown-menu mt-4" aria-labelledby="navbarDropdown">
-
-         
         </div>
-      </li>
-      <li class="nav-item dropdown ">
-        <a class="nav-link nav-menu" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Huawei
-        </a>
-        <div class="dropdown-menu mt-4" aria-labelledby="navbarDropdown">
-
-
-
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link nav-menu" href="?m=userdetail&a=list">
-          Account
-        </a>
-      </li>
-
-    </ul>
-
-
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-dark" ><i style="color: white;" class="fas fa-search"></i></button>
-    </form>
-
-
-  </div>
-</nav>
+    </div>
+    <!-- Header End -->
+</header>
 <div class="content" >{content}
-  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button> 
-</div>
-<a href="?m=cart&a=list">
+</div><!-- 
+<a href="{x}cart/list">
   <div id="myCart">
     <i class="fas fa-shopping-bag" style="height: 20px;"></i>
     <span style="margin-left: 5px; color: white;" class="badge badge-pill badge-secondary">{totalCount}</span></div>
-</a>
-<footer class="page-footer font-small text-white pt-4" style="background-color: rgb(0, 0, 0); bottom: 0;">
-
-  <!-- Footer Links -->
-  <div class="container-fluid text-center text-md-left">
-
-    <!-- Grid row -->
-    <div class="row">
-
-      <!-- Grid column -->
-      <div class="col-md-6 mt-md-0 mt-3">
-
-        <!-- Content -->
-        <h5 class="text-uppercase">Footer Content</h5>
-        <p>Here you can use rows and columns to organize your footer content.</p>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none pb-3">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <!-- Grid column -->
-      <div class="col-md-3 mb-md-0 mb-3">
-
-        <!-- Links -->
-        <h5 class="text-uppercase">Links</h5>
-
-        <ul class="list-unstyled">
-          <li>
-            <a href="#!">Link 1</a>
-          </li>
-          <li>
-            <a href="#!">Link 2</a>
-          </li>
-          <li>
-            <a href="#!">Link 3</a>
-          </li>
-          <li>
-            <a href="#!">Link 4</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
+</a> -->
+<footer>
+    <!-- Footer Start-->
+    <div class="footer-area footer-padding">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col-xl-3 col-lg-3 col-md-5 col-sm-6">
+                    <div class="single-footer-caption mb-50">
+                        <div class="single-footer-caption mb-30">
+                            <!-- logo -->
+                            <div class="footer-logo">
+                                <a href="{x}home"><img src="{x}img/logo.jpg" style="height: 120px;" alt=""></a>
+                            </div>
+                            <div class="footer-tittle">
+                                <div class="footer-pera">
+                                    <p>Asorem ipsum adipolor sdit amet, consectetur adipisicing elitcf sed do eiusmod tem.</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#"> Offers & Discounts</a></li>
+                                <li><a href="#"> Get Coupon</a></li>
+                                <li><a href="#">  Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>New Products</h4>
+                            <ul>
+                                <li><a href="#">Woman Cloth</a></li>
+                                <li><a href="#">Fashion Accessories</a></li>
+                                <li><a href="#"> Man Accessories</a></li>
+                                <li><a href="#"> Rubber made Toys</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
+                    <div class="single-footer-caption mb-50">
+                        <div class="footer-tittle">
+                            <h4>Support</h4>
+                            <ul>
+                                <li><a href="#">Frequently Asked Questions</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Report a Payment Issue</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer bottom -->
+        </div>
     </div>
-    <!-- Grid row -->
-
-  </div>
-  <!-- Footer Links -->
-
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
-
+    <!-- Footer End-->
 </footer>
-<!-- Footer -->
+<input id="category" value="{category}">
 </body>
 </html>
 <style>
 
 
-  /* adds some margin below the link sets  */
-.navbar .dropdown-menu div[class*="col"] {
-margin-bottom:1rem;
-    }
-.navbar .dropdown-menu {
-border:none;
-background-color:white!important;
-}
-.navbar{
-    background: white;
-    border-bottom: 1px solid grey;
-}
-.nav-menu{
-    color:rgba(255, 255, 255, 0.76);
-}
-.nav-menu:hover{
-    color: white;
-}
-#logo{
-    height: 50px;
-    width: 50px;
-}
-.my-menu{
-    margin-left:26%;
-}
-.row{
-    width: 100%;
-}
-/* breakpoint and up - mega dropdown styles */
-@media screen and (min-width: 992px) {
-
-/* remove the padding from the navbar so the dropdown hover state is not broken */
-.navbar {
-padding-top:0px;
-padding-bottom:0px;
-}
-
-/* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
-.navbar .nav-item {
-padding:.5rem .5rem;
-margin:0 .25rem;
-}
-
-/* makes the dropdown full width  */
-.navbar .dropdown {position:static;}
-
-.navbar .dropdown-menu {
-width:100%;
-left:0;
-right:0;
-/*  height of nav-item  */
-top:45px;
-}
-
-/* shows the dropdown menu on hover */
-.navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
-display:block!important;
-}
-}
-.navbar .dropdown-menu {
-    border: 1px solid rgba(0,0,0,.15);
-    background-color: #fff;
-}
-#myBtn{
-    position: fixed;
-    bottom: 20px;
-    right: 30px;
-    z-index: 99; 
-    font-size: 18px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 15px;
-    background-color: rgb(30, 31, 30);
-    color: white;
-    border-radius: 50%;
-}
-#myBtn:hover {
-  color: black;
-  background-color:white;
-  transition-duration: 0.5s;
-}
-
-#myCart{
-    position: fixed;
-    top: 80px;
-    right: 30px;
-    z-index: 99; 
-    font-size: 15px;
-    border: none;
-    outline: none;
-    background-color: rgb(30, 31, 30);
-    cursor: pointer;
-    padding: 11px;
-    border-radius: 10px;
-    color: white;
-
-}  
-#myCart:hover {
-color: black;
-background-color:white;
-transition-duration: 0.5s;
-
-}
 .content{
   min-height: 600px;
 }
-
+#scrollUp{
+    padding-top: 10px;
+}
+.list-item{
+    height: auto;
+}
 </style>
 <script>
 $(document).ready(function() {
@@ -359,29 +197,57 @@ $(document).ready(function() {
     }	
   }); 
 });
-var mybutton = document.getElementById("myBtn");
-    // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-  
-function scrollFunction() {
-  if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-    mybutton.style.display = "block";
-  } 
-  else {
-    mybutton.style.display = "none";
-
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}  
 
 
 
 // document ready  
 
+</script><!-- JS here -->
+
+<script src="{x}assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="{x}assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="{x}assets/js/popper.min.js"></script>
+<script src="{x}assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="{x}assets/js/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="{x}assets/js/owl.carousel.min.js"></script>
+<script src="{x}assets/js/slick.min.js"></script>
+
+<!-- One Page, Animated-HeadLin -->
+<script src="{x}assets/js/wow.min.js"></script>
+<script src="{x}assets/js/animated.headline.js"></script>
+<script src="{x}assets/js/jquery.magnific-popup.js"></script>
+
+<!-- Scrollup, nice-select, sticky -->
+<script src="{x}assets/js/jquery.scrollUp.min.js"></script>
+<script src="{x}assets/js/jquery.nice-select.min.js"></script>
+<script src="{x}assets/js/jquery.sticky.js"></script>
+
+<!-- contact js -->
+<script src="{x}assets/js/contact.js"></script>
+<script src="{x}assets/js/jquery.form.js"></script>
+<script src="{x}assets/js/jquery.validate.min.js"></script>
+<script src="{x}assets/js/mail-script.js"></script>
+<script src="{x}assets/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->	
+<script src="{x}assets/js/plugins.js"></script>
+<script src="{x}assets/js/main.js"></script>
+<link href="{x}css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+<script type="text/javascript" src="{x}js/mdb.min.js"></script>
+<script>
+    var category = $('#category').val();
+        $('#'+category+'').css(
+            "color","red"
+        )
+        $('#'+category+'').css(
+            "font-size","1rem"
+        )
+        view = $('#view').val();
+        $("#exampleFormControlSelect1 option[value="+view+"]").attr('selected', 'selected'); 
 </script>
 <!-- END: LAYOUT-->
